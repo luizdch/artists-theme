@@ -1,0 +1,122 @@
+.workSection {
+   flex-direction row
+   align-items flex-start
+   background-color $color-gray1
+   transition transform .5s ease
+   &.js-slide {
+      transform translateX(-100%)
+   }
+   & > div {
+      flex-shrink 0
+   }
+
+
+
+
+
+   .workGrid {
+      flex-direction row
+      flex-wrap wrap
+   }
+   .workGrid [class ^= 'work'] {
+      preserveAspectRatio(72,47)
+      fullBackgroundImage()
+      flex-grow 1
+      width 25%
+      @media (max-width 1000px) {
+         width 50%
+      }
+      @media (min-width 600px) and (max-width 1000px) {
+         preserveAspectRatio(28,9)
+      }
+   }
+   for $workIndex in (1..8) {
+      .workGrid .work{$workIndex} {
+         background-image url('../img/work/proj_' + $workIndex + '/thumb.jpg')
+      }
+   }
+   .cover {
+      fullBox()
+      justify-content center
+      align-items center
+      display flex
+      opacity 0
+      padding 0 $space-1
+      transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+      transition all .3s ease
+      background-color rgba($color-brown1, .75)
+      cursor pointer
+      color $color-white1
+      font-size $font-4
+      font-weight 100
+      text-align center
+      @media (max-width 430px) {
+         font-size $font-3
+      }
+      @media (max-width 330px) {
+         font-size $font-2
+      }
+   }
+   .workGrid [class ^= 'work']:hover .cover {
+      z-index 2
+      opacity 1
+      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+      animation smack 1s ease
+   }
+
+
+
+
+
+   .completeWorkContainer {
+      height 0
+      transition height .5s linear
+      background-color $color-gray1
+   }
+   .completeWorkContainer.js-show {
+      height 100%
+   }
+   .completeWorkContainer .siteMaxWidthContainer {
+      overflow hidden
+   }
+   .completeWorkContainer header {
+      flex-direction row
+      margin-bottom $space-4
+   }
+   .completeWorkContainer .backIcon {
+      width 40px
+      height 35px
+   }
+   .completeWorkContainer .backIcon svg {
+      color $color-black1
+   }
+   .completeWorkContainer h2 {
+      margin-left $space-3
+      color $color-brown1
+      @media $md-lg {
+         font-size $font-5 * .5
+      }
+      @media $sm {
+         font-size $font-4
+      }
+   }
+   .completeWorkContainer .work {
+      height 0
+      opacity 0
+      transition all .9s ease
+   }
+   .completeWorkContainer .work.js-show {
+      height 100%
+      opacity 1
+      transition all 2s ease
+   }
+   .completeWorkContainer .work img:not(:first-child) {
+      @media $md-lg {
+         margin-top $space-4
+      }
+      @media $sm {
+         margin-top $space-4
+      }
+   }
+
+}

@@ -1,0 +1,60 @@
+.skillsSection {
+   .siteMaxWidthContainer {
+      flex-direction row
+      justify-content space-around
+      @media (max-width 680px) {
+         flex-direction column
+      }
+   }
+
+
+
+
+
+   [class ^= 'group'] {
+      max-width 300px
+   }
+   .group2 {
+      @media (max-width 680px) {
+         margin-top $space-4
+      }
+   }
+   .skillBar {
+      display flex
+      width 100%
+      height 5px
+      margin-top $space-1
+      background-color $color-gray1
+   }
+   .skillBar:before {
+      content ''
+      display block
+      height 100%
+      background-color $color-brown1
+   }
+   .communication:before {
+      width 87%
+   }
+   .learning:before {
+      width 95%
+   }
+   .planning:before {
+      width 73.5%
+   }
+   .uxDesign:before {
+      width 100%
+   }
+   .organization:before {
+      width 68.5%
+   }
+   .teaching:before {
+      width 55%
+   }
+   .visualDesign:before {
+      width 81.5%
+   }
+   .programming:before {
+      width 91.5%
+   }
+
+}

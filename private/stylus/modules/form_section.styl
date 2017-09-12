@@ -1,0 +1,70 @@
+.formSection {
+   form {
+      flex-direction row
+      flex-wrap wrap
+      max-width px(col(5))
+      @media (max-width 450px) {
+         flex-direction column
+      }
+   }
+   span {
+      display block
+      margin-bottom $space-1
+      font-size $font-2
+   }
+   input {
+      height 35px
+      text-indent 10px
+   }
+   input, textarea {
+      width 100%
+      min-width 100%
+      border 3px solid $color-brown1
+   }
+   textarea {
+      min-height 160px
+      max-height 160px
+      resize none
+      padding 10px
+      @media (max-width 450px) {
+         min-height 220px
+         max-height 220px
+      }
+   }
+   .nameLabel, .emailLabel {
+      @media (min-width 451px) {
+         width calc(50% - 10px)
+      }
+      @media (max-width 450px) {
+         width 100%
+      }
+   }
+   .nameLabel {
+      @media (min-width 451px) {
+         margin-right $space-3
+      }
+      @media (max-width 450px) {
+         margin-bottom $space-2
+      }
+   }
+   .messageLabel {
+      width 100%
+      @media (min-width 451px) {
+         margin-top $space-3
+      }
+      @media (max-width 450px) {
+         margin-top $space-2
+      }
+   }
+   .sendButton {
+      width 150px
+      height 55px
+      margin $space-2 0 0 auto
+      background-color $color-brown1
+      color $color-white1
+      font-size $font-4
+      @media (max-width 450px) {
+         width 100%
+      }
+   }
+}

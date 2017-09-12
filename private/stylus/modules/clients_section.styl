@@ -1,0 +1,182 @@
+.clientsSection {
+   h2 {
+      @media $sm {
+         order -2
+      }
+   }
+
+
+
+
+
+
+   .personPage {
+      display none
+      opacity 0
+      transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+      transition all .5s ease
+      @media $md-lg {
+         flex-direction row
+         justify-content center
+         align-items flex-start
+      }
+      @media $sm {
+         padding 0 15px
+      }
+   }
+   .personPage.js-active {
+      display flex
+      z-index 1
+      opacity 1
+      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+      animation smack 1s ease
+   }
+   .personInfoContainer {
+      max-width 250px
+      min-width 250px
+   }
+   .personInfoContainer img {
+      width 100px
+      height 100px
+      border-radius 50%
+   }
+   .personInfoContainer .name {
+      margin-top $space-2
+      font-size $font-3
+   }
+   .personInfoContainer .workInfo {
+      font-size $font-1
+   }
+   .personInfoContainer p {
+      text-align center
+   }
+   .personPage blockquote {
+      max-width 450px
+      font-size $font-3
+      font-weight 100
+      line-height 1.7
+      @media $sm {
+         margin-top $space-3
+      }
+      @media (max-width 400px) {
+         font-size $font-3 * .9
+      }
+   }
+   .personPage blockquote:before,
+   .personPage blockquote:after {
+      content ''
+      z-index -1
+      position absolute
+      display block
+      width 55px
+      height 55px
+      background-image url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgIDxwYXRoIGZpbGw9InJnYmEoMjI3LCAxOTcsIDE0MSwgMC4zKSIgZD0iTTUwLjY5Miw5LjczMmMtMTIuMjA3LDYuMTYtMTguMzA5LDE0LjY5Ny0xOC4zMDksMjUuNjE1YzAsMy42NCwxLjE0Nyw2LjczMywzLjQ0Myw5LjI4YzIuMjk1LDIuNTQ4LDUuMDEsMy44MjEsOC4xNDYsMy44MjEgICBjMi43OTksMCw1LjEyMy0wLjk3OSw2Ljk3MS0yLjkzOWMxLjg0OC0xLjk1OSwyLjc3MS00LjM2NywyLjc3MS03LjIyM2MwLTIuNjg4LTAuOTUzLTUuMDUyLTIuODU1LTcuMDk3ICAgYy0xLjkwNC0yLjA0My00LjMxMi0zLjIzMy03LjIyMy0zLjU2OWMwLTQuNTM1LDMuNDE1LTguNDgyLDEwLjI0Ni0xMS44NDJMNTAuNjkyLDkuNzMyeiBNMTkuODcsOS43MzIgICBDNy43MiwxNS44OTEsMS42NDUsMjQuNDI5LDEuNjQ1LDM1LjM0N2MwLDMuNjQsMS4xMzQsNi43MzMsMy40MDEsOS4yOGMyLjI2OCwyLjU0OCw0Ljk2OCwzLjgyMSw4LjEwNCwzLjgyMSAgIGMyLjc5OSwwLDUuMTM2LTAuOTc5LDcuMDEzLTIuOTM5YzEuODc1LTEuOTU5LDIuODEzLTQuMzY3LDIuODEzLTcuMjIzYzAtMi42ODgtMC45NTMtNS4wNTItMi44NTYtNy4wOTcgICBjLTEuOTA0LTIuMDQzLTQuMzQtMy4yMzMtNy4zMDctMy41NjljMC00LjUzNSwzLjQ0My04LjQ4MiwxMC4zMy0xMS44NDJMMTkuODcsOS43MzJ6Ii8+PC9zdmc+')
+   }
+   .personPage blockquote:before {
+      transform translate(-20%, -18%)
+   }
+   .personPage blockquote:after {
+      right 0
+      transform translate(20%, -80%) rotate(180deg)
+   }
+   .flipper button {
+      @media $md-lg {
+         position absolute
+         top 50%
+      }
+      @media $sm {
+         display none
+      }
+   }
+   .flipper button svg {
+      color $color-yellow1
+      width 40px
+      height 40px
+   }
+   .flipper .flipLeft {
+      @media $md-lg {
+         left 0
+         transform translate(-250%, -50%)
+      }
+   }
+   .flipper .flipRight {
+      @media $md-lg {
+         right 0
+         transform translate(250%, -50%)
+      }
+   }
+   .companiesLogoContainer {
+      flex-direction row
+      justify-content space-around
+      align-items stretch
+      @media $md-lg {
+         margin-top $space-6
+      }
+      @media $sm {
+         order -1
+         max-width 250px
+         margin $space-4 0
+      }
+   }
+   .companiesLogoContainer button {
+      @media $md-lg {
+         fullBackgroundImage()
+         background-size contain
+         overflow visible
+      }
+      @media $sm {
+         width 30px
+         height 30px
+         border 5px solid $color-gray1
+         border-radius 50%
+      }
+   }
+   .companiesLogoContainer button:after {
+      @media $md-lg {
+         content ''
+         display none
+         position absolute
+         width 100%
+         height 5px
+         bottom 0
+         transform translateY(200%)
+         background-color $color-brown1
+      }
+   }
+   .companiesLogoContainer button.js-selected {
+      @media $sm {
+         border-color $color-yellow1
+      }
+   }
+   .companiesLogoContainer button.js-selected:after {
+      @media $md-lg {
+         display block
+      }
+   }
+   .companiesLogoContainer .company1 {
+      @media $md-lg {
+         width 97px
+         background-image url('../img/clients/antarctica_logo.jpg')
+      }
+   }
+   .companiesLogoContainer .company2 {
+      @media $md-lg {
+         width 77px
+         background-image url('../img/clients/lorem_sorem_logo.jpg')
+      }
+   }
+   .companiesLogoContainer .company3 {
+      @media $md-lg {
+         width 211px
+         height 86px
+         background-image url('../img/clients/quebec_logo.jpg')
+      }
+   }
+   .companiesLogoContainer .company4 {
+      @media $md-lg {
+         width 206px
+         background-image url('../img/clients/ontotext_logo.jpg')
+      }
+   }
+
+}

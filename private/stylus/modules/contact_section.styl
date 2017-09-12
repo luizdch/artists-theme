@@ -1,0 +1,76 @@
+.contactSection {
+   background-color $color-gray1
+
+
+
+
+
+   .socialMediaContainer {
+      flex-direction row
+      justify-content space-around
+      padding $space-5 0
+
+   }
+   .socialMediaContainer:after {
+      content ''
+      position absolute
+      display block
+      width 200px
+      height 5px
+      bottom 0
+      left 50%
+      transform translate(-50%, 50%)
+      background-color $color-brown1
+      @media (max-width 420px) {
+         height 3px
+      }
+   }
+   .socialMediaContainer a {
+      display flex
+      justify-content center
+      align-items center
+      width 50px
+      height 50px
+      background-color $color-brown1
+      border-radius 50%
+      transition transform .15s ease-in-out
+      @media (max-width 400px) {
+         width 40px
+         height 40px
+      }
+   }
+   .socialMediaContainer a:hover {
+      @media $lg {
+         transform scale(1.2)
+      }
+   }
+   .socialMediaContainer svg {
+      width 28px
+      height 28px
+      color $color-white1
+   }
+
+
+
+
+
+   .email {
+      margin-top $space-4
+      color $color-brown1
+      font-size $font-5
+      font-weight 100
+      @media (max-width 680px) {
+         font-size $font-5 * .8
+      }
+      @media (max-width 530px) {
+         font-size $font-5 * .65
+      }
+      @media (max-width 420px) {
+         font-size $font-5 * .5
+      }
+      @media (max-width 330px) {
+         font-size $font-5 * .4
+      }
+   }
+
+}

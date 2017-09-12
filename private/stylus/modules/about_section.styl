@@ -1,0 +1,70 @@
+.aboutSection {
+   .photoIconsContainer {
+      flex-direction row
+      justify-content space-around
+      @media $sm {
+         flex-wrap wrap
+      }
+   }
+   .photoIconsContainer [class $= 'Icon'] {
+      background-position center
+      background-repeat no-repeat
+      width 100px
+      height 100px
+      border-radius 50%
+      background-color $color-gray1
+      @media (max-width 300px) {
+         width 90px
+         height 90px
+      }
+   }
+   .photoIconsContainer svg {
+      width 100px
+      height 100px
+      border-radius 50%
+      background-color $color-gray1
+      color $color-brown1
+      @media $sm {
+         margin $space-2
+      }
+      @media (max-width 300px) {
+         width 90px
+         height 90px
+      }
+   }
+   .photoIconsContainer .fillerSpaceContainer {
+      @media $md-lg {
+         width auto
+      }
+      @media $sm {
+         order -1
+         width 100%
+      }
+   }
+   .photoIconsContainer .imgContainer {
+      max-width 200px
+   }
+   .photoIconsContainer img {
+      width 200px
+      height 200px
+      border-radius 50%
+   }
+
+
+
+
+
+   p {
+      max-width px(col(6))
+      font-size $font-4
+      font-weight 100
+      text-align center
+      @media $md-lg {
+         margin-top $space-6
+      }
+      @media $sm {
+         margin-top $space-4
+      }
+   }
+
+}

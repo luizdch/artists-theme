@@ -1,0 +1,48 @@
+// general
+*, *:before, *:after {
+   box-sizing border-box
+   position relative
+   margin 0
+   padding 0
+}
+html, body {
+   overflow-x hidden
+}
+body, div, section, header, footer, nav, aside, main, form {
+   display flex
+   flex-direction column
+   align-items center
+   width 100%
+}
+body, input,  textarea, a {
+   font-family 'open sans'
+   color $color-gray2
+}
+ul {
+   list-style none
+}
+a {
+   text-decoration none
+}
+a:focus {
+   outline none
+}
+input, textarea {
+   outline none
+}
+button {
+   appearance none
+   background-color transparent
+   border none
+   outline none
+   cursor pointer
+}
+button::-moz-focus-inner {
+  border 0
+}
+img, h1, h2, h3, p, blockquote, svg {
+   width 100%
+}
+a, button {
+  -webkit-tap-highlight-color transparent
+}
